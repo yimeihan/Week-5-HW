@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week Five HW</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  </head>
+
+  <body>
+    <div class="site-content">
+      <div class="wrapper">
+        <h1 id="heading"></h1>
+        <form action="submit.html" id="userForm">
+          <input
+            type="text"
+            name="username"
+            placeholder="username"
+            pattern="[A-Za-z0-9_]{1,15}"
+            title="Only letters (either case), numbers, and the underscore. No more than 15 characters."
+            required
+          />
+
+          <input
+            type="email"
+            name="mail"
+            placeholder="email"
+            pattern="(\b[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}\b)"
+            title="Your email must contain a @ and a valid.ext"
+            required
+          />
+
+          <input
+            type="password"
+            name="password"
+            placeholder="password"
+            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{13,24}$"
+            title="Your password must contain at least one number, one lowercase and one uppercase letter and must be least 13 characters long, but no more than 24 characters long, containing letters, numbers or the underscore."
+            required
+          />
+
+          <button type="submit" form="userForm" id="btn">Submit</button>
+
+          <button id="btnReset">Reset</button>
+        </form>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <p>© 2020 Yimei Han</p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>

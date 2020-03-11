@@ -1,0 +1,74 @@
+1.
+When you enter data, the browser and/or the web server will check to see that the data is the correct format and within the constraints set by the application.
+
+2.
+Build-in form validation.
+JavaScript validation.
+
+3.
+One of the most significant features of HTML5 form controls is the ability to validate most user date without relying on JavaScript. This is done by using validation attribute on form element. 
+Such as type: Specifies whether the date needs to be a number, an email address, or some other specific preset type.
+
+4.
+<form action="submit.html" id="userForm">
+          <input
+            type="text"
+            name="username"
+            placeholder="username"
+            pattern="[A-Za-z0-9_]{1,15}"
+            title="Only letters (either case), numbers, and the underscore. No more than 15 characters."
+            required
+          />
+
+          <input
+            type="email"
+            name="mail"
+            placeholder="email"
+            pattern="(\b[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}\b)"
+            title="Your email must contain a @ and a valid.ext"
+            required
+          />
+
+          <input
+            type="password"
+            name="password"
+            placeholder="password"
+            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{13,24}$"
+            title="Your password must contain at least one number, one lowercase and one uppercase letter and must be least 13 characters long, but no more than 24 characters long, containing letters, numbers or the underscore."
+            required
+          />
+
+          <button type="submit" form="userForm" id="btn">Submit</button>
+
+          <button id="btnReset">Reset</button>
+        </form>
+
+5.
+Build-in form validation uses HTML5 form validation features. This validation generally doesn't require much JavaScript. Built-in form validation has better performance than JavaScript, but it is not as customizable as JavaScript validation.
+JavaScript validation is coded using JavaScript. This validation is completely customizable, but you need to create it all(or use a library).
+
+6.
+Title tag, it will override the customized messages you would create with the JavaScript Constraint Validation API.
+
+7.
+Client-side validation is not enough because its scope of action is very restrict.
+
+8.
+You need form validation as a security measure.
+Someone could crash the website by putting a ridiculous value into the form.
+Make it easy for the user to pit in their data.
+
+9.
+Validation
+Form validation is very important on both client and server-side.
+One of the most common aspects of form validation is the enforcement of required field-not allowing a form to be submitted until certain pieces of information have been entered. This can now simply be achieved by adding the requried attribute to an input, select or textarea element.
+<input type="text"... required>
+
+10.
+Required: specifies whether a form field needs to be filled in before the form can be submitted.
+Minlength: specifies the minimum length of textual data strings.
+Maxlength: specfies the maximum length of textual data strings.
+Type: specifies whether the data needs to be a number, an email address, or some other specific preset type.
+Pattern: specifies a regular expression that defines a pattern the entered data need to follow.
+Min: specifies the minimum values of numerical input types.
+Max: specifies the maximum values of numerical input types.
